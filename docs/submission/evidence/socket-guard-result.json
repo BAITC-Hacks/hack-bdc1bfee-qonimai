@@ -1,0 +1,33 @@
+{
+  "scope": "Python socket connect/connect_ex/create_connection/sendto only; not OS-level offline",
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "guards_verified": [
+    "connect",
+    "connect_ex",
+    "sendto",
+    "create_connection"
+  ],
+  "blocked_attempts_during_discovery_and_tests": 0,
+  "tests": 206,
+  "passed": 204,
+  "skipped": [
+    [
+      "test_contracts.ContractTests.test_missing_timezone_database_is_reported_as_environment_error",
+      "Tests actual missing-database environment only"
+    ],
+    [
+      "test_model_output.ModelOutputTests.test_missing_iana_database_precedes_response_decoding",
+      "Tests the actual missing IANA database environment"
+    ]
+  ],
+  "failures": 0,
+  "errors": 0,
+  "seconds_with_discovery": 3.54204,
+  "versions": {
+    "python-docx": "1.2.0",
+    "lxml": "6.1.1",
+    "typing_extensions": "4.16.0",
+    "tzdata": "2026.3"
+  }
+}
