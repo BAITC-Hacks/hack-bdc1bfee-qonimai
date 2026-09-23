@@ -1,0 +1,76 @@
+{
+  "schema_version": "qonimai.analysis.v1",
+  "revision": 1,
+  "meeting": {
+    "started_at": "2026-09-23T10:00:00+05:00",
+    "timezone": "Asia/Qyzylorda"
+  },
+  "participants": [
+    {
+      "id": "p1",
+      "name": "Ирина"
+    },
+    {
+      "id": "p2",
+      "name": "Данияр"
+    }
+  ],
+  "speakers": [
+    {
+      "speaker_id": "spk1",
+      "participant_id": null,
+      "display_name": null,
+      "confirmed": false
+    },
+    {
+      "speaker_id": "spk2",
+      "participant_id": null,
+      "display_name": null,
+      "confirmed": false
+    }
+  ],
+  "segments": [
+    {
+      "id": "s1",
+      "start": 0.0,
+      "end": 7.32,
+      "speaker_id": "spk1",
+      "text": "Даньяр, подготовь таблицу расходов до 30 сентября 2026 года."
+    },
+    {
+      "id": "s2",
+      "start": 8.54,
+      "end": 11.12,
+      "speaker_id": "spk2",
+      "text": "Да, подготовлю таблицу расходов."
+    },
+    {
+      "id": "s3",
+      "start": 12.38,
+      "end": 15.44,
+      "speaker_id": "spk2",
+      "text": "Ирина, проверь список поставщиков завтра."
+    },
+    {
+      "id": "s4",
+      "start": 16.78,
+      "end": 19.66,
+      "speaker_id": "spk1",
+      "text": "Хорошо, проверю список поставщиков."
+    },
+    {
+      "id": "s5",
+      "start": 21.11,
+      "end": 24.11,
+      "speaker_id": "spk1",
+      "text": "Даньяр, собери предложение коллег."
+    },
+    {
+      "id": "s6",
+      "start": 25.45,
+      "end": 27.63,
+      "speaker_id": "spk2",
+      "text": "Хорошо, соберу предложение."
+    }
+  ]
+}

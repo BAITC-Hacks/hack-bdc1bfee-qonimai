@@ -49,3 +49,7 @@ weights/
 *.local.code-workspace
 .DS_Store
 Thumbs.db
+
+# Explicitly reviewed fictional submission artifacts only
+!fixtures/audio/synthetic_ru_two_speakers.wav
+!docs/submission/evidence/synthetic_previous_run.docx

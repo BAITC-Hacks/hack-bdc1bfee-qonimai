@@ -1,0 +1,13 @@
+{
+  "synthetic_only": true,
+  "source": "runtime/asr-smoke-ru.json",
+  "source_revision": 1,
+  "reviewed_revision": 2,
+  "authorized_review": "Coordinator confirmed spk1=Irina/p1, spk2=Daniyar/p2 and ASR spelling/plural against known synthetic script. These are explicit review changes before analysis, not generated model results.",
+  "changes": [
+    "confirmed speaker identities",
+    "Даньяр -> Данияр",
+    "предложение коллег -> предложения коллег",
+    "соберу предложение -> соберу предложения"
+  ]
+}

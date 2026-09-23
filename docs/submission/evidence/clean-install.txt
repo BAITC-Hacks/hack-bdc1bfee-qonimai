@@ -1,0 +1,342 @@
+FULL APPLICATION CLEAN INSTALL VERIFICATION
+Started UTC: 2026-09-23T12:24:53
+Platform: Windows x64 / CPython 3.12.14
+Preparation downloads public Python wheels online. Installation uses --no-index and local wheels.
+This is not an OS-disconnected inference test. No models or servers are started.
+Step 1: .venv/Scripts/python.exe -m pip --isolated download --only-binary=:all: -r requirements-lock.txt -d wheels/app --index-url https://pypi.org/simple --progress-bar off --disable-pip-version-check
+Collecting altair==6.3.0 (from -r requirements-lock.txt (line 1))
+  Using cached altair-6.3.0-py3-none-any.whl.metadata (11 kB)
+Collecting anyio==4.15.1 (from -r requirements-lock.txt (line 2))
+  Using cached anyio-4.15.1-py3-none-any.whl.metadata (4.7 kB)
+Collecting attrs==26.1.0 (from -r requirements-lock.txt (line 3))
+  Using cached attrs-26.1.0-py3-none-any.whl.metadata (8.8 kB)
+Collecting av==18.1.0 (from -r requirements-lock.txt (line 4))
+  Using cached av-18.1.0-cp311-abi3-win_amd64.whl.metadata (5.1 kB)
+Collecting certifi==2026.7.22 (from -r requirements-lock.txt (line 5))
+  Using cached certifi-2026.7.22-py3-none-any.whl.metadata (2.5 kB)
+Collecting charset-normalizer==3.5.1 (from -r requirements-lock.txt (line 6))
+  Using cached charset_normalizer-3.5.1-cp312-cp312-win_amd64.whl.metadata (46 kB)
+Collecting click==8.5.0 (from -r requirements-lock.txt (line 7))
+  Using cached click-8.5.0-py3-none-any.whl.metadata (2.6 kB)
+Collecting colorama==0.4.6 (from -r requirements-lock.txt (line 8))
+  Using cached colorama-0.4.6-py2.py3-none-any.whl.metadata (17 kB)
+Collecting ctranslate2==4.8.2 (from -r requirements-lock.txt (line 9))
+  Using cached ctranslate2-4.8.2-cp312-cp312-win_amd64.whl.metadata (11 kB)
+Collecting faster-whisper==1.2.1 (from -r requirements-lock.txt (line 10))
+  Using cached faster_whisper-1.2.1-py3-none-any.whl.metadata (16 kB)
+Collecting filelock==4.0.1 (from -r requirements-lock.txt (line 11))
+  Using cached filelock-4.0.1-py3-none-any.whl.metadata (2.0 kB)
+Collecting flatbuffers==25.12.19 (from -r requirements-lock.txt (line 12))
+  Using cached flatbuffers-25.12.19-py2.py3-none-any.whl.metadata (1.0 kB)
+Collecting fsspec==2026.9.0 (from -r requirements-lock.txt (line 13))
+  Using cached fsspec-2026.9.0-py3-none-any.whl.metadata (10 kB)
+Collecting h11==0.16.0 (from -r requirements-lock.txt (line 14))
+  Using cached h11-0.16.0-py3-none-any.whl.metadata (8.3 kB)
+Collecting hf-xet==1.6.0 (from -r requirements-lock.txt (line 15))
+  Using cached hf_xet-1.6.0-cp38-abi3-win_amd64.whl.metadata (4.9 kB)
+Collecting httpcore==1.0.9 (from -r requirements-lock.txt (line 16))
+  Using cached httpcore-1.0.9-py3-none-any.whl.metadata (21 kB)
+Collecting httptools==0.8.0 (from -r requirements-lock.txt (line 17))
+  Using cached httptools-0.8.0-cp312-cp312-win_amd64.whl.metadata (3.7 kB)
+Collecting httpx==0.28.1 (from -r requirements-lock.txt (line 18))
+  Using cached httpx-0.28.1-py3-none-any.whl.metadata (7.1 kB)
+Collecting huggingface_hub==1.32.0 (from -r requirements-lock.txt (line 19))
+  Using cached huggingface_hub-1.32.0-py3-none-any.whl.metadata (16 kB)
+Collecting idna==3.20 (from -r requirements-lock.txt (line 20))
+  Using cached idna-3.20-py3-none-any.whl.metadata (7.2 kB)
+Collecting itsdangerous==2.2.0 (from -r requirements-lock.txt (line 21))
+  Using cached itsdangerous-2.2.0-py3-none-any.whl.metadata (1.9 kB)
+Collecting Jinja2==3.1.6 (from -r requirements-lock.txt (line 22))
+  Using cached jinja2-3.1.6-py3-none-any.whl.metadata (2.9 kB)
+Collecting jsonschema==4.26.0 (from -r requirements-lock.txt (line 23))
+  Using cached jsonschema-4.26.0-py3-none-any.whl.metadata (7.6 kB)
+Collecting jsonschema-specifications==2025.9.1 (from -r requirements-lock.txt (line 24))
+  Using cached jsonschema_specifications-2025.9.1-py3-none-any.whl.metadata (2.9 kB)
+Collecting lxml==6.1.1 (from -r requirements-lock.txt (line 25))
+  Using cached lxml-6.1.1-cp312-cp312-win_amd64.whl.metadata (3.6 kB)
+Collecting MarkupSafe==3.0.3 (from -r requirements-lock.txt (line 26))
+  Using cached markupsafe-3.0.3-cp312-cp312-win_amd64.whl.metadata (2.8 kB)
+Collecting narwhals==2.26.0 (from -r requirements-lock.txt (line 27))
+  Using cached narwhals-2.26.0-py3-none-any.whl.metadata (15 kB)
+Collecting numpy==2.3.5 (from -r requirements-lock.txt (line 28))
+  Using cached numpy-2.3.5-cp312-cp312-win_amd64.whl.metadata (60 kB)
+Collecting onnxruntime==1.30.0 (from -r requirements-lock.txt (line 29))
+  Using cached onnxruntime-1.30.0-cp312-cp312-win_amd64.whl.metadata (5.9 kB)
+Collecting packaging==26.3 (from -r requirements-lock.txt (line 30))
+  Using cached packaging-26.3-py3-none-any.whl.metadata (3.5 kB)
+Collecting pandas==3.0.6 (from -r requirements-lock.txt (line 31))
+  Using cached pandas-3.0.6-cp312-cp312-win_amd64.whl.metadata (19 kB)
+Collecting pillow==12.3.0 (from -r requirements-lock.txt (line 32))
+  Using cached pillow-12.3.0-cp312-cp312-win_amd64.whl.metadata (9.3 kB)
+Collecting protobuf==7.36.2 (from -r requirements-lock.txt (line 33))
+  Using cached protobuf-7.36.2-cp310-abi3-win_amd64.whl.metadata (595 bytes)
+Collecting pyarrow==25.0.1 (from -r requirements-lock.txt (line 34))
+  Using cached pyarrow-25.0.1-cp312-cp312-win_amd64.whl.metadata (3.0 kB)
+Collecting pydeck==0.9.3 (from -r requirements-lock.txt (line 35))
+  Using cached pydeck-0.9.3-py2.py3-none-any.whl.metadata (4.2 kB)
+Collecting python-dateutil==2.9.0.post0 (from -r requirements-lock.txt (line 36))
+  Using cached python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
+Collecting python-docx==1.2.0 (from -r requirements-lock.txt (line 37))
+  Using cached python_docx-1.2.0-py3-none-any.whl.metadata (2.0 kB)
+Collecting python-multipart==0.0.32 (from -r requirements-lock.txt (line 38))
+  Using cached python_multipart-0.0.32-py3-none-any.whl.metadata (2.1 kB)
+Collecting PyYAML==6.0.3 (from -r requirements-lock.txt (line 39))
+  Using cached pyyaml-6.0.3-cp312-cp312-win_amd64.whl.metadata (2.4 kB)
+Collecting referencing==0.37.0 (from -r requirements-lock.txt (line 40))
+  Using cached referencing-0.37.0-py3-none-any.whl.metadata (2.8 kB)
+Collecting requests==2.34.2 (from -r requirements-lock.txt (line 41))
+  Using cached requests-2.34.2-py3-none-any.whl.metadata (4.8 kB)
+Collecting rpds-py==2026.6.3 (from -r requirements-lock.txt (line 42))
+  Using cached rpds_py-2026.6.3-cp312-cp312-win_amd64.whl.metadata (4.2 kB)
+Collecting sherpa-onnx-core==1.13.8 (from -r requirements-lock.txt (line 43))
+  Using cached sherpa_onnx_core-1.13.8-py3-none-win_amd64.whl.metadata (532 bytes)
+Collecting sherpa_onnx==1.13.8 (from -r requirements-lock.txt (line 44))
+  Using cached sherpa_onnx-1.13.8-cp312-cp312-win_amd64.whl.metadata (54 kB)
+Collecting six==1.17.0 (from -r requirements-lock.txt (line 45))
+  Using cached six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+Collecting starlette==1.7.0 (from -r requirements-lock.txt (line 46))
+  Using cached starlette-1.7.0-py3-none-any.whl.metadata (6.6 kB)
+Collecting streamlit==1.64.0 (from -r requirements-lock.txt (line 47))
+  Using cached streamlit-1.64.0-py3-none-any.whl.metadata (10 kB)
+Collecting tokenizers==0.23.2 (from -r requirements-lock.txt (line 48))
+  Using cached tokenizers-0.23.2-cp310-abi3-win_amd64.whl.metadata (10 kB)
+Collecting toml==0.10.2 (from -r requirements-lock.txt (line 49))
+  Using cached toml-0.10.2-py2.py3-none-any.whl.metadata (7.1 kB)
+Collecting tqdm==4.70.1 (from -r requirements-lock.txt (line 50))
+  Using cached tqdm-4.70.1-py3-none-any.whl.metadata (57 kB)
+Collecting typing_extensions==4.16.0 (from -r requirements-lock.txt (line 51))
+  Using cached typing_extensions-4.16.0-py3-none-any.whl.metadata (3.3 kB)
+Collecting tzdata==2026.3 (from -r requirements-lock.txt (line 52))
+  Using cached tzdata-2026.3-py2.py3-none-any.whl.metadata (1.4 kB)
+Collecting urllib3==2.8.0 (from -r requirements-lock.txt (line 53))
+  Using cached urllib3-2.8.0-py3-none-any.whl.metadata (7.4 kB)
+Collecting uvicorn==0.53.0 (from -r requirements-lock.txt (line 54))
+  Using cached uvicorn-0.53.0-py3-none-any.whl.metadata (6.6 kB)
+Collecting watchdog==6.0.0 (from -r requirements-lock.txt (line 55))
+  Using cached watchdog-6.0.0-py3-none-win_amd64.whl.metadata (44 kB)
+Collecting websockets==16.1.1 (from -r requirements-lock.txt (line 56))
+  Using cached websockets-16.1.1-cp312-cp312-win_amd64.whl.metadata (7.0 kB)
+Using cached altair-6.3.0-py3-none-any.whl (797 kB)
+Using cached anyio-4.15.1-py3-none-any.whl (132 kB)
+Using cached attrs-26.1.0-py3-none-any.whl (67 kB)
+Using cached av-18.1.0-cp311-abi3-win_amd64.whl (27.6 MB)
+Using cached certifi-2026.7.22-py3-none-any.whl (136 kB)
+Using cached charset_normalizer-3.5.1-cp312-cp312-win_amd64.whl (200 kB)
+Using cached click-8.5.0-py3-none-any.whl (125 kB)
+Using cached colorama-0.4.6-py2.py3-none-any.whl (25 kB)
+Using cached ctranslate2-4.8.2-cp312-cp312-win_amd64.whl (19.2 MB)
+Using cached faster_whisper-1.2.1-py3-none-any.whl (1.1 MB)
+Using cached filelock-4.0.1-py3-none-any.whl (106 kB)
+Using cached flatbuffers-25.12.19-py2.py3-none-any.whl (26 kB)
+Using cached fsspec-2026.9.0-py3-none-any.whl (221 kB)
+Using cached h11-0.16.0-py3-none-any.whl (37 kB)
+Using cached hf_xet-1.6.0-cp38-abi3-win_amd64.whl (4.0 MB)
+Using cached httpcore-1.0.9-py3-none-any.whl (78 kB)
+Using cached httptools-0.8.0-cp312-cp312-win_amd64.whl (90 kB)
+Using cached httpx-0.28.1-py3-none-any.whl (73 kB)
+Using cached huggingface_hub-1.32.0-py3-none-any.whl (842 kB)
+Using cached idna-3.20-py3-none-any.whl (69 kB)
+Using cached itsdangerous-2.2.0-py3-none-any.whl (16 kB)
+Using cached jinja2-3.1.6-py3-none-any.whl (134 kB)
+Using cached jsonschema-4.26.0-py3-none-any.whl (90 kB)
+Using cached jsonschema_specifications-2025.9.1-py3-none-any.whl (18 kB)
+Using cached lxml-6.1.1-cp312-cp312-win_amd64.whl (4.0 MB)
+Using cached markupsafe-3.0.3-cp312-cp312-win_amd64.whl (15 kB)
+Using cached narwhals-2.26.0-py3-none-any.whl (474 kB)
+Using cached numpy-2.3.5-cp312-cp312-win_amd64.whl (12.8 MB)
+Using cached onnxruntime-1.30.0-cp312-cp312-win_amd64.whl (14.3 MB)
+Using cached packaging-26.3-py3-none-any.whl (129 kB)
+Using cached pandas-3.0.6-cp312-cp312-win_amd64.whl (9.7 MB)
+Using cached pillow-12.3.0-cp312-cp312-win_amd64.whl (7.2 MB)
+Using cached protobuf-7.36.2-cp310-abi3-win_amd64.whl (456 kB)
+Using cached pyarrow-25.0.1-cp312-cp312-win_amd64.whl (28.0 MB)
+Using cached pydeck-0.9.3-py2.py3-none-any.whl (11.4 MB)
+Using cached python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+Using cached python_docx-1.2.0-py3-none-any.whl (252 kB)
+Using cached python_multipart-0.0.32-py3-none-any.whl (30 kB)
+Using cached pyyaml-6.0.3-cp312-cp312-win_amd64.whl (154 kB)
+Using cached referencing-0.37.0-py3-none-any.whl (26 kB)
+Using cached requests-2.34.2-py3-none-any.whl (73 kB)
+Using cached rpds_py-2026.6.3-cp312-cp312-win_amd64.whl (220 kB)
+Using cached sherpa_onnx_core-1.13.8-py3-none-win_amd64.whl (16.9 MB)
+Using cached sherpa_onnx-1.13.8-cp312-cp312-win_amd64.whl (2.3 MB)
+Using cached six-1.17.0-py2.py3-none-any.whl (11 kB)
+Using cached starlette-1.7.0-py3-none-any.whl (78 kB)
+Using cached streamlit-1.64.0-py3-none-any.whl (10.1 MB)
+Using cached tokenizers-0.23.2-cp310-abi3-win_amd64.whl (2.9 MB)
+Using cached toml-0.10.2-py2.py3-none-any.whl (16 kB)
+Using cached tqdm-4.70.1-py3-none-any.whl (80 kB)
+Using cached typing_extensions-4.16.0-py3-none-any.whl (45 kB)
+Using cached tzdata-2026.3-py2.py3-none-any.whl (348 kB)
+Using cached urllib3-2.8.0-py3-none-any.whl (135 kB)
+Using cached uvicorn-0.53.0-py3-none-any.whl (87 kB)
+Using cached watchdog-6.0.0-py3-none-win_amd64.whl (79 kB)
+Using cached websockets-16.1.1-cp312-cp312-win_amd64.whl (180 kB)
+Saved c:\users\admin\documents\codex\2026-09-23\mvp-1-https-docs-google-com\outputs\hack-bdc1bfee-qonimai\wheels\app\altair-6.3.0-py3-none-any.whl
+Saved c:\users\admin\documents\codex\2026-09-23\mvp-1-https-docs-google-com\outputs\hack-bdc1bfee-qonimai\wheels\app\anyio-4.15.1-py3-none-any.whl
+Saved c:\users\admin\documents\codex\2026-09-23\mvp-1-https-docs-google-com\outputs\hack-bdc1bfee-qonimai\wheels\app\attrs-26.1.0-py3-none-any.whl
+Saved c:\users\admin\documents\codex\2026-09-23\mvp-1-https-docs-google-com\outputs\hack-bdc1bfee-qonimai\wheels\app\av-18.1.0-cp311-abi3-win_amd64.whl
+Saved c:\users\admin\documents\codex\2026-09-23\mvp-1-https-docs-google-com\outputs\hack-bdc1bfee-qonimai\wheels\app\certifi-2026.7.22-py3-none-any.whl
+Saved c:\users\admin\documents\codex\2026-09-23\mvp-1-https-docs-google-com\outputs\hack-bdc1bfee-qonimai\wheels\app\charset_normalizer-3.5.1-cp312-cp312-win_amd64.whl
+Saved c:\users\admin\documents\codex\2026-09-23\mvp-1-https-docs-google-com\outputs\hack-bdc1bfee-qonimai\wheels\app\click-8.5.0-py3-none-any.whl
+Saved c:\users\admin\documents\codex\2026-09-23\mvp-1-https-docs-google-com\outputs\hack-bdc1bfee-qonimai\wheels\app\colorama-0.4.6-py2.py3-none-any.whl
+Saved c:\users\admin\documents\codex\2026-09-23\mvp-1-https-docs-google-com\outputs\hack-bdc1bfee-qonimai\wheels\app\ctranslate2-4.8.2-cp312-cp312-win_amd64.whl
+Saved c:\users\admin\documents\codex\2026-09-23\mvp-1-https-docs-google-com\outputs\hack-bdc1bfee-qonimai\wheels\app\faster_whisper-1.2.1-py3-none-any.whl
+Saved c:\users\admin\documents\codex\2026-09-23\mvp-1-https-docs-google-com\outputs\hack-bdc1bfee-qonimai\wheels\app\filelock-4.0.1-py3-none-any.whl
+Saved c:\users\admin\documents\codex\2026-09-23\mvp-1-https-docs-google-com\outputs\hack-bdc1bfee-qonimai\wheels\app\flatbuffers-25.12.19-py2.py3-none-any.whl
+Saved c:\users\admin\documents\codex\2026-09-23\mvp-1-https-docs-google-com\outputs\hack-bdc1bfee-qonimai\wheels\app\fsspec-2026.9.0-py3-none-any.whl
+Saved c:\users\admin\documents\codex\2026-09-23\mvp-1-https-docs-google-com\outputs\hack-bdc1bfee-qonimai\wheels\app\h11-0.16.0-py3-none-any.whl
+Saved c:\users\admin\documents\codex\2026-09-23\mvp-1-https-docs-google-com\outputs\hack-bdc1bfee-qonimai\wheels\app\hf_xet-1.6.0-cp38-abi3-win_amd64.whl
+Saved c:\users\admin\documents\codex\2026-09-23\mvp-1-https-docs-google-com\outputs\hack-bdc1bfee-qonimai\wheels\app\httpcore-1.0.9-py3-none-any.whl
+Saved c:\users\admin\documents\codex\2026-09-23\mvp-1-https-docs-google-com\outputs\hack-bdc1bfee-qonimai\wheels\app\httptools-0.8.0-cp312-cp312-win_amd64.whl
+Saved c:\users\admin\documents\codex\2026-09-23\mvp-1-https-docs-google-com\outputs\hack-bdc1bfee-qonimai\wheels\app\httpx-0.28.1-py3-none-any.whl
+Saved c:\users\admin\documents\codex\2026-09-23\mvp-1-https-docs-google-com\outputs\hack-bdc1bfee-qonimai\wheels\app\huggingface_hub-1.32.0-py3-none-any.whl
+Saved c:\users\admin\documents\codex\2026-09-23\mvp-1-https-docs-google-com\outputs\hack-bdc1bfee-qonimai\wheels\app\idna-3.20-py3-none-any.whl
+Saved c:\users\admin\documents\codex\2026-09-23\mvp-1-https-docs-google-com\outputs\hack-bdc1bfee-qonimai\wheels\app\itsdangerous-2.2.0-py3-none-any.whl
+Saved c:\users\admin\documents\codex\2026-09-23\mvp-1-https-docs-google-com\outputs\hack-bdc1bfee-qonimai\wheels\app\jinja2-3.1.6-py3-none-any.whl
+Saved c:\users\admin\documents\codex\2026-09-23\mvp-1-https-docs-google-com\outputs\hack-bdc1bfee-qonimai\wheels\app\jsonschema-4.26.0-py3-none-any.whl
+Saved c:\users\admin\documents\codex\2026-09-23\mvp-1-https-docs-google-com\outputs\hack-bdc1bfee-qonimai\wheels\app\jsonschema_specifications-2025.9.1-py3-none-any.whl
+Saved c:\users\admin\documents\codex\2026-09-23\mvp-1-https-docs-google-com\outputs\hack-bdc1bfee-qonimai\wheels\app\lxml-6.1.1-cp312-cp312-win_amd64.whl
+Saved c:\users\admin\documents\codex\2026-09-23\mvp-1-https-docs-google-com\outputs\hack-bdc1bfee-qonimai\wheels\app\markupsafe-3.0.3-cp312-cp312-win_amd64.whl
+Saved c:\users\admin\documents\codex\2026-09-23\mvp-1-https-docs-google-com\outputs\hack-bdc1bfee-qonimai\wheels\app\narwhals-2.26.0-py3-none-any.whl
+Saved c:\users\admin\documents\codex\2026-09-23\mvp-1-https-docs-google-com\outputs\hack-bdc1bfee-qonimai\wheels\app\numpy-2.3.5-cp312-cp312-win_amd64.whl
+Saved c:\users\admin\documents\codex\2026-09-23\mvp-1-https-docs-google-com\outputs\hack-bdc1bfee-qonimai\wheels\app\onnxruntime-1.30.0-cp312-cp312-win_amd64.whl
+Saved c:\users\admin\documents\codex\2026-09-23\mvp-1-https-docs-google-com\outputs\hack-bdc1bfee-qonimai\wheels\app\packaging-26.3-py3-none-any.whl
+Saved c:\users\admin\documents\codex\2026-09-23\mvp-1-https-docs-google-com\outputs\hack-bdc1bfee-qonimai\wheels\app\pandas-3.0.6-cp312-cp312-win_amd64.whl
+Saved c:\users\admin\documents\codex\2026-09-23\mvp-1-https-docs-google-com\outputs\hack-bdc1bfee-qonimai\wheels\app\pillow-12.3.0-cp312-cp312-win_amd64.whl
+Saved c:\users\admin\documents\codex\2026-09-23\mvp-1-https-docs-google-com\outputs\hack-bdc1bfee-qonimai\wheels\app\protobuf-7.36.2-cp310-abi3-win_amd64.whl
+Saved c:\users\admin\documents\codex\2026-09-23\mvp-1-https-docs-google-com\outputs\hack-bdc1bfee-qonimai\wheels\app\pyarrow-25.0.1-cp312-cp312-win_amd64.whl
+Saved c:\users\admin\documents\codex\2026-09-23\mvp-1-https-docs-google-com\outputs\hack-bdc1bfee-qonimai\wheels\app\pydeck-0.9.3-py2.py3-none-any.whl
+Saved c:\users\admin\documents\codex\2026-09-23\mvp-1-https-docs-google-com\outputs\hack-bdc1bfee-qonimai\wheels\app\python_dateutil-2.9.0.post0-py2.py3-none-any.whl
+Saved c:\users\admin\documents\codex\2026-09-23\mvp-1-https-docs-google-com\outputs\hack-bdc1bfee-qonimai\wheels\app\python_docx-1.2.0-py3-none-any.whl
+Saved c:\users\admin\documents\codex\2026-09-23\mvp-1-https-docs-google-com\outputs\hack-bdc1bfee-qonimai\wheels\app\python_multipart-0.0.32-py3-none-any.whl
+Saved c:\users\admin\documents\codex\2026-09-23\mvp-1-https-docs-google-com\outputs\hack-bdc1bfee-qonimai\wheels\app\pyyaml-6.0.3-cp312-cp312-win_amd64.whl
+Saved c:\users\admin\documents\codex\2026-09-23\mvp-1-https-docs-google-com\outputs\hack-bdc1bfee-qonimai\wheels\app\referencing-0.37.0-py3-none-any.whl
+Saved c:\users\admin\documents\codex\2026-09-23\mvp-1-https-docs-google-com\outputs\hack-bdc1bfee-qonimai\wheels\app\requests-2.34.2-py3-none-any.whl
+Saved c:\users\admin\documents\codex\2026-09-23\mvp-1-https-docs-google-com\outputs\hack-bdc1bfee-qonimai\wheels\app\rpds_py-2026.6.3-cp312-cp312-win_amd64.whl
+Saved c:\users\admin\documents\codex\2026-09-23\mvp-1-https-docs-google-com\outputs\hack-bdc1bfee-qonimai\wheels\app\sherpa_onnx_core-1.13.8-py3-none-win_amd64.whl
+Saved c:\users\admin\documents\codex\2026-09-23\mvp-1-https-docs-google-com\outputs\hack-bdc1bfee-qonimai\wheels\app\sherpa_onnx-1.13.8-cp312-cp312-win_amd64.whl
+Saved c:\users\admin\documents\codex\2026-09-23\mvp-1-https-docs-google-com\outputs\hack-bdc1bfee-qonimai\wheels\app\six-1.17.0-py2.py3-none-any.whl
+Saved c:\users\admin\documents\codex\2026-09-23\mvp-1-https-docs-google-com\outputs\hack-bdc1bfee-qonimai\wheels\app\starlette-1.7.0-py3-none-any.whl
+Saved c:\users\admin\documents\codex\2026-09-23\mvp-1-https-docs-google-com\outputs\hack-bdc1bfee-qonimai\wheels\app\streamlit-1.64.0-py3-none-any.whl
+Saved c:\users\admin\documents\codex\2026-09-23\mvp-1-https-docs-google-com\outputs\hack-bdc1bfee-qonimai\wheels\app\tokenizers-0.23.2-cp310-abi3-win_amd64.whl
+Saved c:\users\admin\documents\codex\2026-09-23\mvp-1-https-docs-google-com\outputs\hack-bdc1bfee-qonimai\wheels\app\toml-0.10.2-py2.py3-none-any.whl
+Saved c:\users\admin\documents\codex\2026-09-23\mvp-1-https-docs-google-com\outputs\hack-bdc1bfee-qonimai\wheels\app\tqdm-4.70.1-py3-none-any.whl
+Saved c:\users\admin\documents\codex\2026-09-23\mvp-1-https-docs-google-com\outputs\hack-bdc1bfee-qonimai\wheels\app\typing_extensions-4.16.0-py3-none-any.whl
+Saved c:\users\admin\documents\codex\2026-09-23\mvp-1-https-docs-google-com\outputs\hack-bdc1bfee-qonimai\wheels\app\tzdata-2026.3-py2.py3-none-any.whl
+Saved c:\users\admin\documents\codex\2026-09-23\mvp-1-https-docs-google-com\outputs\hack-bdc1bfee-qonimai\wheels\app\urllib3-2.8.0-py3-none-any.whl
+Saved c:\users\admin\documents\codex\2026-09-23\mvp-1-https-docs-google-com\outputs\hack-bdc1bfee-qonimai\wheels\app\uvicorn-0.53.0-py3-none-any.whl
+Saved c:\users\admin\documents\codex\2026-09-23\mvp-1-https-docs-google-com\outputs\hack-bdc1bfee-qonimai\wheels\app\watchdog-6.0.0-py3-none-win_amd64.whl
+Saved c:\users\admin\documents\codex\2026-09-23\mvp-1-https-docs-google-com\outputs\hack-bdc1bfee-qonimai\wheels\app\websockets-16.1.1-cp312-cp312-win_amd64.whl
+Successfully downloaded altair anyio attrs av certifi charset-normalizer click colorama ctranslate2 faster-whisper filelock flatbuffers fsspec h11 hf-xet httpcore httptools httpx huggingface_hub idna itsdangerous Jinja2 jsonschema jsonschema-specifications lxml MarkupSafe narwhals numpy onnxruntime packaging pandas pillow protobuf pyarrow pydeck python-dateutil python-docx python-multipart PyYAML referencing requests rpds-py sherpa-onnx-core sherpa_onnx six starlette streamlit tokenizers toml tqdm typing_extensions tzdata urllib3 uvicorn watchdog websockets
+Download exit: 0
+Download seconds: 8.1360718
+Step 2: bundled CPython 3.12.14 -m venv .venv-clean (fresh, no system packages)
+home = C:\Users\Admin\.cache\codex-runtimes\codex-primary-runtime\dependencies\python
+include-system-site-packages = false
+version = 3.12.14
+executable = C:\Users\Admin\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\python.exe
+command = C:\Users\Admin\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\python.exe -m venv C:\Users\Admin\Documents\Codex\2026-09-23\mvp-1-https-docs-google-com\outputs\hack-bdc1bfee-qonimai\.venv-clean
+Venv creation seconds: 6.4758521
+Looking in links: wheels/app
+Processing c:\users\admin\documents\codex\2026-09-23\mvp-1-https-docs-google-com\outputs\hack-bdc1bfee-qonimai\wheels\app\altair-6.3.0-py3-none-any.whl (from -r requirements-lock.txt (line 1))
+Processing c:\users\admin\documents\codex\2026-09-23\mvp-1-https-docs-google-com\outputs\hack-bdc1bfee-qonimai\wheels\app\anyio-4.15.1-py3-none-any.whl (from -r requirements-lock.txt (line 2))
+Processing c:\users\admin\documents\codex\2026-09-23\mvp-1-https-docs-google-com\outputs\hack-bdc1bfee-qonimai\wheels\app\attrs-26.1.0-py3-none-any.whl (from -r requirements-lock.txt (line 3))
+Processing c:\users\admin\documents\codex\2026-09-23\mvp-1-https-docs-google-com\outputs\hack-bdc1bfee-qonimai\wheels\app\av-18.1.0-cp311-abi3-win_amd64.whl (from -r requirements-lock.txt (line 4))
+Processing c:\users\admin\documents\codex\2026-09-23\mvp-1-https-docs-google-com\outputs\hack-bdc1bfee-qonimai\wheels\app\certifi-2026.7.22-py3-none-any.whl (from -r requirements-lock.txt (line 5))
+Processing c:\users\admin\documents\codex\2026-09-23\mvp-1-https-docs-google-com\outputs\hack-bdc1bfee-qonimai\wheels\app\charset_normalizer-3.5.1-cp312-cp312-win_amd64.whl (from -r requirements-lock.txt (line 6))
+Processing c:\users\admin\documents\codex\2026-09-23\mvp-1-https-docs-google-com\outputs\hack-bdc1bfee-qonimai\wheels\app\click-8.5.0-py3-none-any.whl (from -r requirements-lock.txt (line 7))
+Processing c:\users\admin\documents\codex\2026-09-23\mvp-1-https-docs-google-com\outputs\hack-bdc1bfee-qonimai\wheels\app\colorama-0.4.6-py2.py3-none-any.whl (from -r requirements-lock.txt (line 8))
+Processing c:\users\admin\documents\codex\2026-09-23\mvp-1-https-docs-google-com\outputs\hack-bdc1bfee-qonimai\wheels\app\ctranslate2-4.8.2-cp312-cp312-win_amd64.whl (from -r requirements-lock.txt (line 9))
+Processing c:\users\admin\documents\codex\2026-09-23\mvp-1-https-docs-google-com\outputs\hack-bdc1bfee-qonimai\wheels\app\faster_whisper-1.2.1-py3-none-any.whl (from -r requirements-lock.txt (line 10))
+Processing c:\users\admin\documents\codex\2026-09-23\mvp-1-https-docs-google-com\outputs\hack-bdc1bfee-qonimai\wheels\app\filelock-4.0.1-py3-none-any.whl (from -r requirements-lock.txt (line 11))
+Processing c:\users\admin\documents\codex\2026-09-23\mvp-1-https-docs-google-com\outputs\hack-bdc1bfee-qonimai\wheels\app\flatbuffers-25.12.19-py2.py3-none-any.whl (from -r requirements-lock.txt (line 12))
+Processing c:\users\admin\documents\codex\2026-09-23\mvp-1-https-docs-google-com\outputs\hack-bdc1bfee-qonimai\wheels\app\fsspec-2026.9.0-py3-none-any.whl (from -r requirements-lock.txt (line 13))
+Processing c:\users\admin\documents\codex\2026-09-23\mvp-1-https-docs-google-com\outputs\hack-bdc1bfee-qonimai\wheels\app\h11-0.16.0-py3-none-any.whl (from -r requirements-lock.txt (line 14))
+Processing c:\users\admin\documents\codex\2026-09-23\mvp-1-https-docs-google-com\outputs\hack-bdc1bfee-qonimai\wheels\app\hf_xet-1.6.0-cp38-abi3-win_amd64.whl (from -r requirements-lock.txt (line 15))
+Processing c:\users\admin\documents\codex\2026-09-23\mvp-1-https-docs-google-com\outputs\hack-bdc1bfee-qonimai\wheels\app\httpcore-1.0.9-py3-none-any.whl (from -r requirements-lock.txt (line 16))
+Processing c:\users\admin\documents\codex\2026-09-23\mvp-1-https-docs-google-com\outputs\hack-bdc1bfee-qonimai\wheels\app\httptools-0.8.0-cp312-cp312-win_amd64.whl (from -r requirements-lock.txt (line 17))
+Processing c:\users\admin\documents\codex\2026-09-23\mvp-1-https-docs-google-com\outputs\hack-bdc1bfee-qonimai\wheels\app\httpx-0.28.1-py3-none-any.whl (from -r requirements-lock.txt (line 18))
+Processing c:\users\admin\documents\codex\2026-09-23\mvp-1-https-docs-google-com\outputs\hack-bdc1bfee-qonimai\wheels\app\huggingface_hub-1.32.0-py3-none-any.whl (from -r requirements-lock.txt (line 19))
+Processing c:\users\admin\documents\codex\2026-09-23\mvp-1-https-docs-google-com\outputs\hack-bdc1bfee-qonimai\wheels\app\idna-3.20-py3-none-any.whl (from -r requirements-lock.txt (line 20))
+Processing c:\users\admin\documents\codex\2026-09-23\mvp-1-https-docs-google-com\outputs\hack-bdc1bfee-qonimai\wheels\app\itsdangerous-2.2.0-py3-none-any.whl (from -r requirements-lock.txt (line 21))
+Processing c:\users\admin\documents\codex\2026-09-23\mvp-1-https-docs-google-com\outputs\hack-bdc1bfee-qonimai\wheels\app\jinja2-3.1.6-py3-none-any.whl (from -r requirements-lock.txt (line 22))
+Processing c:\users\admin\documents\codex\2026-09-23\mvp-1-https-docs-google-com\outputs\hack-bdc1bfee-qonimai\wheels\app\jsonschema-4.26.0-py3-none-any.whl (from -r requirements-lock.txt (line 23))
+Processing c:\users\admin\documents\codex\2026-09-23\mvp-1-https-docs-google-com\outputs\hack-bdc1bfee-qonimai\wheels\app\jsonschema_specifications-2025.9.1-py3-none-any.whl (from -r requirements-lock.txt (line 24))
+Processing c:\users\admin\documents\codex\2026-09-23\mvp-1-https-docs-google-com\outputs\hack-bdc1bfee-qonimai\wheels\app\lxml-6.1.1-cp312-cp312-win_amd64.whl (from -r requirements-lock.txt (line 25))
+Processing c:\users\admin\documents\codex\2026-09-23\mvp-1-https-docs-google-com\outputs\hack-bdc1bfee-qonimai\wheels\app\markupsafe-3.0.3-cp312-cp312-win_amd64.whl (from -r requirements-lock.txt (line 26))
+Processing c:\users\admin\documents\codex\2026-09-23\mvp-1-https-docs-google-com\outputs\hack-bdc1bfee-qonimai\wheels\app\narwhals-2.26.0-py3-none-any.whl (from -r requirements-lock.txt (line 27))
+Processing c:\users\admin\documents\codex\2026-09-23\mvp-1-https-docs-google-com\outputs\hack-bdc1bfee-qonimai\wheels\app\numpy-2.3.5-cp312-cp312-win_amd64.whl (from -r requirements-lock.txt (line 28))
+Processing c:\users\admin\documents\codex\2026-09-23\mvp-1-https-docs-google-com\outputs\hack-bdc1bfee-qonimai\wheels\app\onnxruntime-1.30.0-cp312-cp312-win_amd64.whl (from -r requirements-lock.txt (line 29))
+Processing c:\users\admin\documents\codex\2026-09-23\mvp-1-https-docs-google-com\outputs\hack-bdc1bfee-qonimai\wheels\app\packaging-26.3-py3-none-any.whl (from -r requirements-lock.txt (line 30))
+Processing c:\users\admin\documents\codex\2026-09-23\mvp-1-https-docs-google-com\outputs\hack-bdc1bfee-qonimai\wheels\app\pandas-3.0.6-cp312-cp312-win_amd64.whl (from -r requirements-lock.txt (line 31))
+Processing c:\users\admin\documents\codex\2026-09-23\mvp-1-https-docs-google-com\outputs\hack-bdc1bfee-qonimai\wheels\app\pillow-12.3.0-cp312-cp312-win_amd64.whl (from -r requirements-lock.txt (line 32))
+Processing c:\users\admin\documents\codex\2026-09-23\mvp-1-https-docs-google-com\outputs\hack-bdc1bfee-qonimai\wheels\app\protobuf-7.36.2-cp310-abi3-win_amd64.whl (from -r requirements-lock.txt (line 33))
+Processing c:\users\admin\documents\codex\2026-09-23\mvp-1-https-docs-google-com\outputs\hack-bdc1bfee-qonimai\wheels\app\pyarrow-25.0.1-cp312-cp312-win_amd64.whl (from -r requirements-lock.txt (line 34))
+Processing c:\users\admin\documents\codex\2026-09-23\mvp-1-https-docs-google-com\outputs\hack-bdc1bfee-qonimai\wheels\app\pydeck-0.9.3-py2.py3-none-any.whl (from -r requirements-lock.txt (line 35))
+Processing c:\users\admin\documents\codex\2026-09-23\mvp-1-https-docs-google-com\outputs\hack-bdc1bfee-qonimai\wheels\app\python_dateutil-2.9.0.post0-py2.py3-none-any.whl (from -r requirements-lock.txt (line 36))
+Processing c:\users\admin\documents\codex\2026-09-23\mvp-1-https-docs-google-com\outputs\hack-bdc1bfee-qonimai\wheels\app\python_docx-1.2.0-py3-none-any.whl (from -r requirements-lock.txt (line 37))
+Processing c:\users\admin\documents\codex\2026-09-23\mvp-1-https-docs-google-com\outputs\hack-bdc1bfee-qonimai\wheels\app\python_multipart-0.0.32-py3-none-any.whl (from -r requirements-lock.txt (line 38))
+Processing c:\users\admin\documents\codex\2026-09-23\mvp-1-https-docs-google-com\outputs\hack-bdc1bfee-qonimai\wheels\app\pyyaml-6.0.3-cp312-cp312-win_amd64.whl (from -r requirements-lock.txt (line 39))
+Processing c:\users\admin\documents\codex\2026-09-23\mvp-1-https-docs-google-com\outputs\hack-bdc1bfee-qonimai\wheels\app\referencing-0.37.0-py3-none-any.whl (from -r requirements-lock.txt (line 40))
+Processing c:\users\admin\documents\codex\2026-09-23\mvp-1-https-docs-google-com\outputs\hack-bdc1bfee-qonimai\wheels\app\requests-2.34.2-py3-none-any.whl (from -r requirements-lock.txt (line 41))
+Processing c:\users\admin\documents\codex\2026-09-23\mvp-1-https-docs-google-com\outputs\hack-bdc1bfee-qonimai\wheels\app\rpds_py-2026.6.3-cp312-cp312-win_amd64.whl (from -r requirements-lock.txt (line 42))
+Processing c:\users\admin\documents\codex\2026-09-23\mvp-1-https-docs-google-com\outputs\hack-bdc1bfee-qonimai\wheels\app\sherpa_onnx_core-1.13.8-py3-none-win_amd64.whl (from -r requirements-lock.txt (line 43))
+Processing c:\users\admin\documents\codex\2026-09-23\mvp-1-https-docs-google-com\outputs\hack-bdc1bfee-qonimai\wheels\app\sherpa_onnx-1.13.8-cp312-cp312-win_amd64.whl (from -r requirements-lock.txt (line 44))
+Processing c:\users\admin\documents\codex\2026-09-23\mvp-1-https-docs-google-com\outputs\hack-bdc1bfee-qonimai\wheels\app\six-1.17.0-py2.py3-none-any.whl (from -r requirements-lock.txt (line 45))
+Processing c:\users\admin\documents\codex\2026-09-23\mvp-1-https-docs-google-com\outputs\hack-bdc1bfee-qonimai\wheels\app\starlette-1.7.0-py3-none-any.whl (from -r requirements-lock.txt (line 46))
+Processing c:\users\admin\documents\codex\2026-09-23\mvp-1-https-docs-google-com\outputs\hack-bdc1bfee-qonimai\wheels\app\streamlit-1.64.0-py3-none-any.whl (from -r requirements-lock.txt (line 47))
+Processing c:\users\admin\documents\codex\2026-09-23\mvp-1-https-docs-google-com\outputs\hack-bdc1bfee-qonimai\wheels\app\tokenizers-0.23.2-cp310-abi3-win_amd64.whl (from -r requirements-lock.txt (line 48))
+Processing c:\users\admin\documents\codex\2026-09-23\mvp-1-https-docs-google-com\outputs\hack-bdc1bfee-qonimai\wheels\app\toml-0.10.2-py2.py3-none-any.whl (from -r requirements-lock.txt (line 49))
+Processing c:\users\admin\documents\codex\2026-09-23\mvp-1-https-docs-google-com\outputs\hack-bdc1bfee-qonimai\wheels\app\tqdm-4.70.1-py3-none-any.whl (from -r requirements-lock.txt (line 50))
+Processing c:\users\admin\documents\codex\2026-09-23\mvp-1-https-docs-google-com\outputs\hack-bdc1bfee-qonimai\wheels\app\typing_extensions-4.16.0-py3-none-any.whl (from -r requirements-lock.txt (line 51))
+Processing c:\users\admin\documents\codex\2026-09-23\mvp-1-https-docs-google-com\outputs\hack-bdc1bfee-qonimai\wheels\app\tzdata-2026.3-py2.py3-none-any.whl (from -r requirements-lock.txt (line 52))
+Processing c:\users\admin\documents\codex\2026-09-23\mvp-1-https-docs-google-com\outputs\hack-bdc1bfee-qonimai\wheels\app\urllib3-2.8.0-py3-none-any.whl (from -r requirements-lock.txt (line 53))
+Processing c:\users\admin\documents\codex\2026-09-23\mvp-1-https-docs-google-com\outputs\hack-bdc1bfee-qonimai\wheels\app\uvicorn-0.53.0-py3-none-any.whl (from -r requirements-lock.txt (line 54))
+Processing c:\users\admin\documents\codex\2026-09-23\mvp-1-https-docs-google-com\outputs\hack-bdc1bfee-qonimai\wheels\app\watchdog-6.0.0-py3-none-win_amd64.whl (from -r requirements-lock.txt (line 55))
+Processing c:\users\admin\documents\codex\2026-09-23\mvp-1-https-docs-google-com\outputs\hack-bdc1bfee-qonimai\wheels\app\websockets-16.1.1-cp312-cp312-win_amd64.whl (from -r requirements-lock.txt (line 56))
+Installing collected packages: sherpa-onnx-core, flatbuffers, websockets, watchdog, urllib3, tzdata, typing_extensions, toml, six, sherpa_onnx, rpds-py, PyYAML, python-multipart, pyarrow, protobuf, pillow, packaging, numpy, narwhals, MarkupSafe, lxml, itsdangerous, idna, httptools, hf-xet, h11, fsspec, filelock, colorama, click, charset-normalizer, certifi, av, attrs, uvicorn, tqdm, requests, referencing, python-docx, python-dateutil, onnxruntime, Jinja2, httpcore, ctranslate2, anyio, starlette, pydeck, pandas, jsonschema-specifications, httpx, jsonschema, huggingface_hub, tokenizers, altair, streamlit, faster-whisper
+Successfully installed Jinja2-3.1.6 MarkupSafe-3.0.3 PyYAML-6.0.3 altair-6.3.0 anyio-4.15.1 attrs-26.1.0 av-18.1.0 certifi-2026.7.22 charset-normalizer-3.5.1 click-8.5.0 colorama-0.4.6 ctranslate2-4.8.2 faster-whisper-1.2.1 filelock-4.0.1 flatbuffers-25.12.19 fsspec-2026.9.0 h11-0.16.0 hf-xet-1.6.0 httpcore-1.0.9 httptools-0.8.0 httpx-0.28.1 huggingface_hub-1.32.0 idna-3.20 itsdangerous-2.2.0 jsonschema-4.26.0 jsonschema-specifications-2025.9.1 lxml-6.1.1 narwhals-2.26.0 numpy-2.3.5 onnxruntime-1.30.0 packaging-26.3 pandas-3.0.6 pillow-12.3.0 protobuf-7.36.2 pyarrow-25.0.1 pydeck-0.9.3 python-dateutil-2.9.0.post0 python-docx-1.2.0 python-multipart-0.0.32 referencing-0.37.0 requests-2.34.2 rpds-py-2026.6.3 sherpa-onnx-core-1.13.8 sherpa_onnx-1.13.8 six-1.17.0 starlette-1.7.0 streamlit-1.64.0 tokenizers-0.23.2 toml-0.10.2 tqdm-4.70.1 typing_extensions-4.16.0 tzdata-2026.3 urllib3-2.8.0 uvicorn-0.53.0 watchdog-6.0.0 websockets-16.1.1
+Install exit: 0
+Install seconds: 24.7607481
+
+POST-INSTALL CHECKS
+Install command: .venv-clean/Scripts/python.exe -m pip --isolated install --no-index --find-links wheels/app -r requirements-lock.txt --disable-pip-version-check --progress-bar off
+A transient Windows file lock prevented appending only the Step 3 heading; package-install output and exit/timing were recorded successfully.
+Wheel files: 56; total bytes: 177899108
+requirements-lock.txt SHA256: 71788967bfde2558d39dc172734ed60922ba258067830f4b1253b65d399c4943
+Command: .venv-clean/Scripts/python.exe -B -m pip check
+No broken requirements found.
+
+pip check exit: 0
+pip check seconds: 0.439076
+IMPORT PASS: streamlit
+IMPORT PASS: faster_whisper
+IMPORT PASS: sherpa_onnx
+IMPORT PASS: audio.pipeline
+IMPORT PASS: analysis.local_model
+IMPORT PASS: export_docx
+Import seconds: 3.757234
+Models were not loaded; no app or model server was started.
+Command equivalent: .venv-clean/Scripts/python.exe -B -m unittest discover -s tests -p test_*.py
+........................................................................s.........................................................................................................................................................................s..........................................................
+----------------------------------------------------------------------
+Ran 301 tests in 7.687s
+
+OK (skipped=2)
+
+Tests including discovery seconds: 7.708943
+Discovered: 301
+Passed: 299
+Skipped: 2
+Errors: 0
+Failures: 0
+SKIP: test_contracts.ContractTests.test_missing_timezone_database_is_reported_as_environment_error -- Tests actual missing-database environment only
+SKIP: test_model_output.ModelOutputTests.test_missing_iana_database_precedes_response_decoding -- Tests the actual missing IANA database environment
+Python: 3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]
+Platform: Windows-11-10.0.26200-SP0
+Versions: {"av": "18.1.0", "ctranslate2": "4.8.2", "faster-whisper": "1.2.1", "numpy": "2.3.5", "python-docx": "1.2.0", "sherpa-onnx": "1.13.8", "streamlit": "1.64.0", "tzdata": "2026.3"}
+FINAL: PASS
+Scope: clean Python environment, all pinned dependencies installed from prepared local wheels with --no-index, imports and unit tests. Preparation had internet access and used the pip cache. Not OS-disconnected model inference or fresh weight preparation.
+Observation: Streamlit unit tests emitted expected bare-mode missing ScriptRunContext warnings to stderr; the unittest result remained successful.
+Completed UTC: 2026-09-23T12:27:20

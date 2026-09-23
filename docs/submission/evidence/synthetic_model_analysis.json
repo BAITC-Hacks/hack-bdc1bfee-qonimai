@@ -1,0 +1,72 @@
+{
+  "status": "ok",
+  "data": {
+    "source_revision": 2,
+    "tasks": [
+      {
+        "id": "t1",
+        "description": "Подготовить таблицу расходов",
+        "author_speaker_id": "spk1",
+        "assignee_id": "p2",
+        "due_text": "до 30 сентября 2026 года",
+        "due_date": "2026-09-30",
+        "source_segment_ids": [
+          "s1",
+          "s2"
+        ],
+        "requires_clarification": false,
+        "clarification_reasons": []
+      },
+      {
+        "id": "t2",
+        "description": "Проверить список поставщиков",
+        "author_speaker_id": "spk2",
+        "assignee_id": "p1",
+        "due_text": "завтра",
+        "due_date": "2026-09-24",
+        "source_segment_ids": [
+          "s3",
+          "s4"
+        ],
+        "requires_clarification": false,
+        "clarification_reasons": []
+      },
+      {
+        "id": "t3",
+        "description": "Собрать предложения коллег",
+        "author_speaker_id": "spk1",
+        "assignee_id": "p2",
+        "due_text": null,
+        "due_date": null,
+        "source_segment_ids": [
+          "s5",
+          "s6"
+        ],
+        "requires_clarification": true,
+        "clarification_reasons": [
+          {
+            "code": "missing_due",
+            "message": "Срок не назван."
+          }
+        ]
+      }
+    ],
+    "summary": [
+      {
+        "id": "f1",
+        "text": "Данияру поручено подготовить таблицу расходов до 30 сентября 2026 года. Ирине поручено проверить список поставщиков завтра. Данияру поручено собрать предложения коллег; срок не назван.",
+        "source_segment_ids": [
+          "s1",
+          "s2",
+          "s3",
+          "s4",
+          "s5",
+          "s6"
+        ]
+      }
+    ],
+    "decisions": [],
+    "user_edits": []
+  },
+  "error": null
+}
