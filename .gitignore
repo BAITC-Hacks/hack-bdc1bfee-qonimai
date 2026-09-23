@@ -1,0 +1,50 @@
+# Local environments and caches
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+# Private meeting data: keep outside the shared project whenever possible
+data/
+private/
+runtime/
+recordings/
+transcripts/
+exports/
+outputs/
+logs/
+*.log
+*.wav
+*.mp3
+*.m4a
+*.ogg
+*.flac
+*.aac
+*.opus
+*.mp4
+*.webm
+*.mov
+*.mkv
+*.docx
+*.pdf
+# Model weights
+models/
+weights/
+*.gguf
+*.safetensors
+*.pt
+*.pth
+*.onnx
+# Credentials and local configuration
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+.streamlit/secrets.toml
+*.local.code-workspace
+.DS_Store
+Thumbs.db

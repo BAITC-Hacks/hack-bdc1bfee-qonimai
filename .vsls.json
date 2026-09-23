@@ -1,0 +1,22 @@
+{
+  "gitignore": "exclude",
+  "excludeFiles": [
+    ".git/**",
+    "**/.env",
+    "**/.env.*",
+    "**/secrets.toml",
+    "**/*.pem",
+    "**/*.key",
+    "**/*.p12",
+    "**/data/**",
+    "**/private/**",
+    "**/runtime/**",
+    "**/recordings/**",
+    "**/transcripts/**",
+    "**/exports/**",
+    "**/outputs/**",
+    "**/logs/**",
+    "**/models/**",
+    "**/weights/**"
+  ]
+}
