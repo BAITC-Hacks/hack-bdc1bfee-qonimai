@@ -1,0 +1,1201 @@
+{
+  "metadata": {
+    "schema_version": "qonimai.analysis.draft-1",
+    "status": "DRAFT",
+    "synthetic": true,
+    "model_output": false,
+    "created_on": "2026-09-23",
+    "description": "Полностью вымышленные контрольные входы и ожидаемые результаты. Не запуск модели и не реальные транскрипты.",
+    "summary_comparison": "По фактам и подтверждающим сегментам, не по буквальному совпадению формулировки.",
+    "language_review_note": "Казахский и смешанные диалоги ожидают проверки человеком со знанием казахского."
+  },
+  "cases": [
+    {
+      "id": "RU_EXPLICIT",
+      "language": "ru",
+      "language_review": "not_required",
+      "input": {
+        "schema_version": "qonimai.analysis.draft-1",
+        "revision": 1,
+        "meeting": {
+          "started_at": "2026-09-23T10:00:00+05:00",
+          "timezone": "Asia/Qyzylorda"
+        },
+        "participants": [
+          {
+            "id": "p1",
+            "name": "Ирина"
+          },
+          {
+            "id": "p2",
+            "name": "Данияр"
+          }
+        ],
+        "speakers": [
+          {
+            "speaker_id": "spk1",
+            "participant_id": "p1",
+            "display_name": "Ирина",
+            "confirmed": true
+          },
+          {
+            "speaker_id": "spk2",
+            "participant_id": "p2",
+            "display_name": "Данияр",
+            "confirmed": true
+          }
+        ],
+        "segments": [
+          {
+            "id": "s1",
+            "start": 0,
+            "end": 5,
+            "speaker_id": "spk1",
+            "text": "Данияр, подготовь таблицу расходов до 30 сентября 2026 года."
+          },
+          {
+            "id": "s2",
+            "start": 4,
+            "end": 7,
+            "speaker_id": "spk2",
+            "text": "Да, подготовлю таблицу."
+          }
+        ]
+      },
+      "expected": {
+        "status": "ok",
+        "data": {
+          "source_revision": 1,
+          "summary": [
+            {
+              "id": "f1",
+              "text": "Данияру поручено подготовить таблицу расходов до 30 сентября 2026 года.",
+              "source_segment_ids": [
+                "s1",
+                "s2"
+              ]
+            }
+          ],
+          "decisions": [],
+          "tasks": [
+            {
+              "id": "t1",
+              "description": "Подготовить таблицу расходов",
+              "author_speaker_id": "spk1",
+              "assignee_id": "p2",
+              "due_text": "до 30 сентября 2026 года",
+              "due_date": "2026-09-30",
+              "source_segment_ids": [
+                "s1",
+                "s2"
+              ],
+              "requires_clarification": false,
+              "clarification_reasons": []
+            }
+          ]
+        },
+        "error": null
+      },
+      "check": "Автор spk1/p1 отличается от исполнителя p2. Перекрытие 4–5 секунд разрешено. Полная дата явная."
+    },
+    {
+      "id": "KK_EXPLICIT",
+      "language": "kk",
+      "language_review": "pending",
+      "input": {
+        "schema_version": "qonimai.analysis.draft-1",
+        "revision": 1,
+        "meeting": {
+          "started_at": "2026-09-23T10:00:00+05:00",
+          "timezone": "Asia/Qyzylorda"
+        },
+        "participants": [
+          {
+            "id": "p1",
+            "name": "Айжан"
+          },
+          {
+            "id": "p2",
+            "name": "Ерлан"
+          }
+        ],
+        "speakers": [
+          {
+            "speaker_id": "spk1",
+            "participant_id": "p1",
+            "display_name": "Айжан",
+            "confirmed": true
+          },
+          {
+            "speaker_id": "spk2",
+            "participant_id": "p2",
+            "display_name": "Ерлан",
+            "confirmed": true
+          }
+        ],
+        "segments": [
+          {
+            "id": "s1",
+            "start": 0,
+            "end": 5,
+            "speaker_id": "spk1",
+            "text": "Ерлан, есепті 2026 жылғы 30 қыркүйекке дейін дайында."
+          },
+          {
+            "id": "s2",
+            "start": 5,
+            "end": 8,
+            "speaker_id": "spk2",
+            "text": "Жақсы, есепті дайындаймын."
+          }
+        ]
+      },
+      "expected": {
+        "status": "ok",
+        "data": {
+          "source_revision": 1,
+          "summary": [
+            {
+              "id": "f1",
+              "text": "Ерлану поручено подготовить отчёт до 30 сентября 2026 года.",
+              "source_segment_ids": [
+                "s1",
+                "s2"
+              ]
+            }
+          ],
+          "decisions": [],
+          "tasks": [
+            {
+              "id": "t1",
+              "description": "Подготовить отчёт",
+              "author_speaker_id": "spk1",
+              "assignee_id": "p2",
+              "due_text": "2026 жылғы 30 қыркүйекке дейін",
+              "due_date": "2026-09-30",
+              "source_segment_ids": [
+                "s1",
+                "s2"
+              ],
+              "requires_clarification": false,
+              "clarification_reasons": []
+            }
+          ]
+        },
+        "error": null
+      },
+      "check": "Предполагаемый смысл: подготовить отчёт к указанной дате. Текст, перевод, границы due_text и ожидание требуют проверки человеком, знающим казахский; это не проверенный языковой эталон."
+    },
+    {
+      "id": "MIXED",
+      "language": "ru-kk",
+      "language_review": "pending",
+      "input": {
+        "schema_version": "qonimai.analysis.draft-1",
+        "revision": 1,
+        "meeting": {
+          "started_at": "2026-09-23T10:00:00+05:00",
+          "timezone": "Asia/Qyzylorda"
+        },
+        "participants": [
+          {
+            "id": "p1",
+            "name": "Ирина"
+          },
+          {
+            "id": "p2",
+            "name": "Данияр"
+          }
+        ],
+        "speakers": [
+          {
+            "speaker_id": "spk1",
+            "participant_id": "p1",
+            "display_name": "Ирина",
+            "confirmed": true
+          },
+          {
+            "speaker_id": "spk2",
+            "participant_id": "p2",
+            "display_name": "Данияр",
+            "confirmed": true
+          }
+        ],
+        "segments": [
+          {
+            "id": "s1",
+            "start": 0,
+            "end": 6,
+            "speaker_id": "spk1",
+            "text": "Данияр, подготовь список вопросов до 25 сентября 2026 года."
+          },
+          {
+            "id": "s2",
+            "start": 6,
+            "end": 9,
+            "speaker_id": "spk2",
+            "text": "Жақсы, сұрақтар тізімін дайындаймын."
+          }
+        ]
+      },
+      "expected": {
+        "status": "ok",
+        "data": {
+          "source_revision": 1,
+          "summary": [
+            {
+              "id": "f1",
+              "text": "Данияр согласился подготовить список вопросов до 25 сентября 2026 года.",
+              "source_segment_ids": [
+                "s1",
+                "s2"
+              ]
+            }
+          ],
+          "decisions": [],
+          "tasks": [
+            {
+              "id": "t1",
+              "description": "Подготовить список вопросов",
+              "author_speaker_id": "spk1",
+              "assignee_id": "p2",
+              "due_text": "до 25 сентября 2026 года",
+              "due_date": "2026-09-25",
+              "source_segment_ids": [
+                "s1",
+                "s2"
+              ],
+              "requires_clarification": false,
+              "clarification_reasons": []
+            }
+          ]
+        },
+        "error": null
+      },
+      "check": "Переключение русского на казахский между репликами. Казахская реплика и смысл согласия ожидают языковой проверки."
+    },
+    {
+      "id": "NO_DUE",
+      "language": "ru",
+      "language_review": "not_required",
+      "input": {
+        "schema_version": "qonimai.analysis.draft-1",
+        "revision": 1,
+        "meeting": {
+          "started_at": "2026-09-23T10:00:00+05:00",
+          "timezone": "Asia/Qyzylorda"
+        },
+        "participants": [
+          {
+            "id": "p1",
+            "name": "Ирина"
+          },
+          {
+            "id": "p2",
+            "name": "Данияр"
+          }
+        ],
+        "speakers": [
+          {
+            "speaker_id": "spk1",
+            "participant_id": "p1",
+            "display_name": "Ирина",
+            "confirmed": true
+          },
+          {
+            "speaker_id": "spk2",
+            "participant_id": "p2",
+            "display_name": "Данияр",
+            "confirmed": true
+          }
+        ],
+        "segments": [
+          {
+            "id": "s1",
+            "start": 0,
+            "end": 4,
+            "speaker_id": "spk1",
+            "text": "Данияр, подготовь список вопросов."
+          }
+        ]
+      },
+      "expected": {
+        "status": "ok",
+        "data": {
+          "source_revision": 1,
+          "summary": [
+            {
+              "id": "f1",
+              "text": "Данияру поручили подготовить список вопросов; срок не назван.",
+              "source_segment_ids": [
+                "s1"
+              ]
+            }
+          ],
+          "decisions": [],
+          "tasks": [
+            {
+              "id": "t1",
+              "description": "Подготовить список вопросов",
+              "author_speaker_id": "spk1",
+              "assignee_id": "p2",
+              "due_text": null,
+              "due_date": null,
+              "source_segment_ids": [
+                "s1"
+              ],
+              "requires_clarification": true,
+              "clarification_reasons": [
+                {
+                  "code": "missing_due",
+                  "message": "Срок не назван; уточните дату."
+                }
+              ]
+            }
+          ]
+        },
+        "error": null
+      },
+      "check": "Исполнитель известен, хотя не говорит. due_text и due_date равны null; уточнение срока видимо."
+    },
+    {
+      "id": "TOMORROW_YEAR",
+      "language": "ru",
+      "language_review": "not_required",
+      "input": {
+        "schema_version": "qonimai.analysis.draft-1",
+        "revision": 1,
+        "meeting": {
+          "started_at": "2026-12-31T23:30:00+05:00",
+          "timezone": "Asia/Qyzylorda"
+        },
+        "participants": [
+          {
+            "id": "p1",
+            "name": "Ирина"
+          },
+          {
+            "id": "p2",
+            "name": "Данияр"
+          }
+        ],
+        "speakers": [
+          {
+            "speaker_id": "spk1",
+            "participant_id": "p1",
+            "display_name": "Ирина",
+            "confirmed": true
+          },
+          {
+            "speaker_id": "spk2",
+            "participant_id": "p2",
+            "display_name": "Данияр",
+            "confirmed": true
+          }
+        ],
+        "segments": [
+          {
+            "id": "s1",
+            "start": 0,
+            "end": 4,
+            "speaker_id": "spk1",
+            "text": "Данияр, отправь отчёт завтра."
+          }
+        ]
+      },
+      "expected": {
+        "status": "ok",
+        "data": {
+          "source_revision": 1,
+          "summary": [
+            {
+              "id": "f1",
+              "text": "Данияру поручили отправить отчёт на следующий день после совещания.",
+              "source_segment_ids": [
+                "s1"
+              ]
+            }
+          ],
+          "decisions": [],
+          "tasks": [
+            {
+              "id": "t1",
+              "description": "Отправить отчёт",
+              "author_speaker_id": "spk1",
+              "assignee_id": "p2",
+              "due_text": "завтра",
+              "due_date": "2027-01-01",
+              "source_segment_ids": [
+                "s1"
+              ],
+              "requires_clarification": false,
+              "clarification_reasons": []
+            }
+          ]
+        },
+        "error": null
+      },
+      "check": "Следующий календарный день по Asia/Qyzylorda пересекает границу года; час не придумывается."
+    },
+    {
+      "id": "NO_TASKS",
+      "language": "ru",
+      "language_review": "not_required",
+      "input": {
+        "schema_version": "qonimai.analysis.draft-1",
+        "revision": 1,
+        "meeting": {
+          "started_at": "2026-09-23T10:00:00+05:00",
+          "timezone": "Asia/Qyzylorda"
+        },
+        "participants": [
+          {
+            "id": "p1",
+            "name": "Ирина"
+          },
+          {
+            "id": "p2",
+            "name": "Данияр"
+          }
+        ],
+        "speakers": [
+          {
+            "speaker_id": "spk1",
+            "participant_id": "p1",
+            "display_name": "Ирина",
+            "confirmed": true
+          },
+          {
+            "speaker_id": "spk2",
+            "participant_id": "p2",
+            "display_name": "Данияр",
+            "confirmed": true
+          }
+        ],
+        "segments": [
+          {
+            "id": "s1",
+            "start": 0,
+            "end": 4,
+            "speaker_id": "spk1",
+            "text": "Вчера мы обсудили цвет обложки."
+          },
+          {
+            "id": "s2",
+            "start": 4,
+            "end": 7,
+            "speaker_id": "spk2",
+            "text": "Мне понравился синий вариант."
+          }
+        ]
+      },
+      "expected": {
+        "status": "ok",
+        "data": {
+          "source_revision": 1,
+          "summary": [
+            {
+              "id": "f1",
+              "text": "Обсуждали цвет обложки; Данияру понравился синий вариант.",
+              "source_segment_ids": [
+                "s1",
+                "s2"
+              ]
+            }
+          ],
+          "decisions": [],
+          "tasks": []
+        },
+        "error": null
+      },
+      "check": "Предпочтение не является решением выбрать цвет или поручением. status ok, tasks и decisions пусты."
+    },
+    {
+      "id": "UNKNOWN_ASSIGNEE",
+      "language": "ru",
+      "language_review": "not_required",
+      "input": {
+        "schema_version": "qonimai.analysis.draft-1",
+        "revision": 1,
+        "meeting": {
+          "started_at": "2026-09-23T10:00:00+05:00",
+          "timezone": "Asia/Qyzylorda"
+        },
+        "participants": [
+          {
+            "id": "p1",
+            "name": "Ирина"
+          },
+          {
+            "id": "p2",
+            "name": "Данияр"
+          }
+        ],
+        "speakers": [
+          {
+            "speaker_id": "spk1",
+            "participant_id": "p1",
+            "display_name": "Ирина",
+            "confirmed": true
+          },
+          {
+            "speaker_id": "spk2",
+            "participant_id": "p2",
+            "display_name": "Данияр",
+            "confirmed": true
+          }
+        ],
+        "segments": [
+          {
+            "id": "s1",
+            "start": 0,
+            "end": 4,
+            "speaker_id": "spk1",
+            "text": "Нужно подготовить таблицу до 30 сентября 2026 года."
+          }
+        ]
+      },
+      "expected": {
+        "status": "ok",
+        "data": {
+          "source_revision": 1,
+          "summary": [
+            {
+              "id": "f1",
+              "text": "Нужно подготовить таблицу до 30 сентября 2026 года; исполнитель не указан.",
+              "source_segment_ids": [
+                "s1"
+              ]
+            }
+          ],
+          "decisions": [],
+          "tasks": [
+            {
+              "id": "t1",
+              "description": "Подготовить таблицу",
+              "author_speaker_id": "spk1",
+              "assignee_id": null,
+              "due_text": "до 30 сентября 2026 года",
+              "due_date": "2026-09-30",
+              "source_segment_ids": [
+                "s1"
+              ],
+              "requires_clarification": true,
+              "clarification_reasons": [
+                {
+                  "code": "unknown_assignee",
+                  "message": "Исполнитель не назван; автор реплики не назначается автоматически."
+                }
+              ]
+            }
+          ]
+        },
+        "error": null
+      },
+      "check": "Автор известен, но assignee_id null. Явная необходимость действия включена как поручение, требующее уточнения исполнителя."
+    },
+    {
+      "id": "DUPLICATE_NAME",
+      "language": "ru",
+      "language_review": "not_required",
+      "input": {
+        "schema_version": "qonimai.analysis.draft-1",
+        "revision": 1,
+        "meeting": {
+          "started_at": "2026-09-23T10:00:00+05:00",
+          "timezone": "Asia/Qyzylorda"
+        },
+        "participants": [
+          {
+            "id": "p1",
+            "name": "Ирина"
+          },
+          {
+            "id": "p2",
+            "name": "Алексей"
+          },
+          {
+            "id": "p3",
+            "name": "Алексей"
+          }
+        ],
+        "speakers": [
+          {
+            "speaker_id": "spk1",
+            "participant_id": "p1",
+            "display_name": "Ирина",
+            "confirmed": true
+          },
+          {
+            "speaker_id": "spk2",
+            "participant_id": "p2",
+            "display_name": "Алексей",
+            "confirmed": true
+          },
+          {
+            "speaker_id": "spk3",
+            "participant_id": "p3",
+            "display_name": "Алексей",
+            "confirmed": true
+          }
+        ],
+        "segments": [
+          {
+            "id": "s1",
+            "start": 0,
+            "end": 5,
+            "speaker_id": "spk1",
+            "text": "Алексей, подготовь схему до 30 сентября 2026 года."
+          }
+        ]
+      },
+      "expected": {
+        "status": "ok",
+        "data": {
+          "source_revision": 1,
+          "summary": [
+            {
+              "id": "f1",
+              "text": "Поручено подготовить схему к указанной дате; адресат Алексей неоднозначен.",
+              "source_segment_ids": [
+                "s1"
+              ]
+            }
+          ],
+          "decisions": [],
+          "tasks": [
+            {
+              "id": "t1",
+              "description": "Подготовить схему",
+              "author_speaker_id": "spk1",
+              "assignee_id": null,
+              "due_text": "до 30 сентября 2026 года",
+              "due_date": "2026-09-30",
+              "source_segment_ids": [
+                "s1"
+              ],
+              "requires_clarification": true,
+              "clarification_reasons": [
+                {
+                  "code": "ambiguous_assignee",
+                  "message": "Есть два подтверждённых участника с именем Алексей; уточните участника."
+                }
+              ]
+            }
+          ]
+        },
+        "error": null
+      },
+      "check": "Нельзя выбрать p2 или p3 по порядку в списке."
+    },
+    {
+      "id": "UNCONFIRMED_SELF",
+      "language": "ru",
+      "language_review": "not_required",
+      "input": {
+        "schema_version": "qonimai.analysis.draft-1",
+        "revision": 1,
+        "meeting": {
+          "started_at": "2026-09-23T10:00:00+05:00",
+          "timezone": "Asia/Qyzylorda"
+        },
+        "participants": [
+          {
+            "id": "p1",
+            "name": "Ирина"
+          }
+        ],
+        "speakers": [
+          {
+            "speaker_id": "spk1",
+            "participant_id": "p1",
+            "display_name": "Ирина",
+            "confirmed": true
+          },
+          {
+            "speaker_id": "spk2",
+            "participant_id": null,
+            "display_name": "Данияр",
+            "confirmed": false
+          }
+        ],
+        "segments": [
+          {
+            "id": "s1",
+            "start": 0,
+            "end": 5,
+            "speaker_id": "spk2",
+            "text": "Я подготовлю отчёт до 30 сентября 2026 года."
+          }
+        ]
+      },
+      "expected": {
+        "status": "ok",
+        "data": {
+          "source_revision": 1,
+          "summary": [
+            {
+              "id": "f1",
+              "text": "Неподтверждённый говорящий взял подготовку отчёта к указанной дате.",
+              "source_segment_ids": [
+                "s1"
+              ]
+            }
+          ],
+          "decisions": [],
+          "tasks": [
+            {
+              "id": "t1",
+              "description": "Подготовить отчёт",
+              "author_speaker_id": "spk2",
+              "assignee_id": null,
+              "due_text": "до 30 сентября 2026 года",
+              "due_date": "2026-09-30",
+              "source_segment_ids": [
+                "s1"
+              ],
+              "requires_clarification": true,
+              "clarification_reasons": [
+                {
+                  "code": "unconfirmed_assignee",
+                  "message": "Говорящий сказал «я», но его личность не подтверждена."
+                }
+              ]
+            }
+          ]
+        },
+        "error": null
+      },
+      "check": "Подсказка display_name не превращается в подтверждённого участника; assignee_id null."
+    },
+    {
+      "id": "CANCELLED",
+      "language": "ru",
+      "language_review": "not_required",
+      "input": {
+        "schema_version": "qonimai.analysis.draft-1",
+        "revision": 1,
+        "meeting": {
+          "started_at": "2026-09-23T10:00:00+05:00",
+          "timezone": "Asia/Qyzylorda"
+        },
+        "participants": [
+          {
+            "id": "p1",
+            "name": "Ирина"
+          },
+          {
+            "id": "p2",
+            "name": "Данияр"
+          }
+        ],
+        "speakers": [
+          {
+            "speaker_id": "spk1",
+            "participant_id": "p1",
+            "display_name": "Ирина",
+            "confirmed": true
+          },
+          {
+            "speaker_id": "spk2",
+            "participant_id": "p2",
+            "display_name": "Данияр",
+            "confirmed": true
+          }
+        ],
+        "segments": [
+          {
+            "id": "s1",
+            "start": 0,
+            "end": 5,
+            "speaker_id": "spk1",
+            "text": "Данияр, подготовь отчёт до 30 сентября 2026 года."
+          },
+          {
+            "id": "s2",
+            "start": 5,
+            "end": 8,
+            "speaker_id": "spk1",
+            "text": "Отменяю это поручение, отчёт больше не нужен."
+          }
+        ]
+      },
+      "expected": {
+        "status": "ok",
+        "data": {
+          "source_revision": 1,
+          "summary": [
+            {
+              "id": "f1",
+              "text": "Поручение Данияру подготовить отчёт отменено.",
+              "source_segment_ids": [
+                "s1",
+                "s2"
+              ]
+            }
+          ],
+          "decisions": [
+            {
+              "id": "d1",
+              "text": "Отменить подготовку отчёта.",
+              "source_segment_ids": [
+                "s1",
+                "s2"
+              ]
+            }
+          ],
+          "tasks": []
+        },
+        "error": null
+      },
+      "check": "Отменённое поручение отсутствует в действующих tasks; решение об отмене опирается на обе реплики."
+    },
+    {
+      "id": "HYPOTHETICAL",
+      "language": "ru",
+      "language_review": "not_required",
+      "input": {
+        "schema_version": "qonimai.analysis.draft-1",
+        "revision": 1,
+        "meeting": {
+          "started_at": "2026-09-23T10:00:00+05:00",
+          "timezone": "Asia/Qyzylorda"
+        },
+        "participants": [
+          {
+            "id": "p1",
+            "name": "Ирина"
+          },
+          {
+            "id": "p2",
+            "name": "Данияр"
+          }
+        ],
+        "speakers": [
+          {
+            "speaker_id": "spk1",
+            "participant_id": "p1",
+            "display_name": "Ирина",
+            "confirmed": true
+          },
+          {
+            "speaker_id": "spk2",
+            "participant_id": "p2",
+            "display_name": "Данияр",
+            "confirmed": true
+          }
+        ],
+        "segments": [
+          {
+            "id": "s1",
+            "start": 0,
+            "end": 5,
+            "speaker_id": "spk1",
+            "text": "Если появится заказ, можно будет подготовить презентацию."
+          },
+          {
+            "id": "s2",
+            "start": 5,
+            "end": 9,
+            "speaker_id": "spk2",
+            "text": "Пока заказа нет, ничего не поручаем."
+          }
+        ]
+      },
+      "expected": {
+        "status": "ok",
+        "data": {
+          "source_revision": 1,
+          "summary": [
+            {
+              "id": "f1",
+              "text": "Обсудили возможность презентации при появлении заказа; поручений не выдали.",
+              "source_segment_ids": [
+                "s1",
+                "s2"
+              ]
+            }
+          ],
+          "decisions": [],
+          "tasks": []
+        },
+        "error": null
+      },
+      "check": "Гипотеза не превращается в действующее задание или решение готовить презентацию."
+    },
+    {
+      "id": "AMBIGUOUS_FRIDAY",
+      "language": "ru",
+      "language_review": "not_required",
+      "input": {
+        "schema_version": "qonimai.analysis.draft-1",
+        "revision": 1,
+        "meeting": {
+          "started_at": "2026-09-23T10:00:00+05:00",
+          "timezone": "Asia/Qyzylorda"
+        },
+        "participants": [
+          {
+            "id": "p1",
+            "name": "Ирина"
+          },
+          {
+            "id": "p2",
+            "name": "Данияр"
+          }
+        ],
+        "speakers": [
+          {
+            "speaker_id": "spk1",
+            "participant_id": "p1",
+            "display_name": "Ирина",
+            "confirmed": true
+          },
+          {
+            "speaker_id": "spk2",
+            "participant_id": "p2",
+            "display_name": "Данияр",
+            "confirmed": true
+          }
+        ],
+        "segments": [
+          {
+            "id": "s1",
+            "start": 0,
+            "end": 5,
+            "speaker_id": "spk1",
+            "text": "Данияр, подготовь отчёт к следующей пятнице."
+          }
+        ]
+      },
+      "expected": {
+        "status": "ok",
+        "data": {
+          "source_revision": 1,
+          "summary": [
+            {
+              "id": "f1",
+              "text": "Данияру поручили подготовить отчёт к следующей пятнице; точная дата требует уточнения.",
+              "source_segment_ids": [
+                "s1"
+              ]
+            }
+          ],
+          "decisions": [],
+          "tasks": [
+            {
+              "id": "t1",
+              "description": "Подготовить отчёт",
+              "author_speaker_id": "spk1",
+              "assignee_id": "p2",
+              "due_text": "к следующей пятнице",
+              "due_date": null,
+              "source_segment_ids": [
+                "s1"
+              ],
+              "requires_clarification": true,
+              "clarification_reasons": [
+                {
+                  "code": "ambiguous_due",
+                  "message": "Правило для «к следующей пятнице» не согласовано; уточните дату."
+                }
+              ]
+            }
+          ]
+        },
+        "error": null
+      },
+      "check": "Не вычислять ближайшую или следующую календарную пятницу по собственному правилу."
+    },
+    {
+      "id": "NO_SPEECH",
+      "language": "und",
+      "language_review": "not_applicable",
+      "input": {
+        "schema_version": "qonimai.analysis.draft-1",
+        "revision": 1,
+        "meeting": {
+          "started_at": "2026-09-23T10:00:00+05:00",
+          "timezone": "Asia/Qyzylorda"
+        },
+        "participants": [],
+        "speakers": [],
+        "segments": []
+      },
+      "expected": {
+        "status": "no_speech",
+        "data": {
+          "source_revision": 1,
+          "summary": [],
+          "decisions": [],
+          "tasks": []
+        },
+        "error": null
+      },
+      "check": "Условный структурный вход без сегментов. no_speech отличается от разговора без поручений и от пустого ответа модели. Реальное аудио с тишиной не запускалось."
+    },
+    {
+      "id": "TOMORROW_MONTH",
+      "language": "ru",
+      "language_review": "not_required",
+      "input": {
+        "schema_version": "qonimai.analysis.draft-1",
+        "revision": 1,
+        "meeting": {
+          "started_at": "2026-09-30T00:15:00+05:00",
+          "timezone": "Asia/Qyzylorda"
+        },
+        "participants": [
+          {
+            "id": "p1",
+            "name": "Ирина"
+          },
+          {
+            "id": "p2",
+            "name": "Данияр"
+          }
+        ],
+        "speakers": [
+          {
+            "speaker_id": "spk1",
+            "participant_id": "p1",
+            "display_name": "Ирина",
+            "confirmed": true
+          },
+          {
+            "speaker_id": "spk2",
+            "participant_id": "p2",
+            "display_name": "Данияр",
+            "confirmed": true
+          }
+        ],
+        "segments": [
+          {
+            "id": "s1",
+            "start": 0,
+            "end": 4,
+            "speaker_id": "spk1",
+            "text": "Данияр, отправь список завтра."
+          }
+        ]
+      },
+      "expected": {
+        "status": "ok",
+        "data": {
+          "source_revision": 1,
+          "summary": [
+            {
+              "id": "f1",
+              "text": "Данияру поручили отправить список на следующий день после совещания.",
+              "source_segment_ids": [
+                "s1"
+              ]
+            }
+          ],
+          "decisions": [],
+          "tasks": [
+            {
+              "id": "t1",
+              "description": "Отправить список",
+              "author_speaker_id": "spk1",
+              "assignee_id": "p2",
+              "due_text": "завтра",
+              "due_date": "2026-10-01",
+              "source_segment_ids": [
+                "s1"
+              ],
+              "requires_clarification": false,
+              "clarification_reasons": []
+            }
+          ]
+        },
+        "error": null
+      },
+      "check": "Граница месяца: локально уже 30 сентября, хотя в UTC ещё 29 сентября. Результат 1 октября, не 30 сентября."
+    },
+    {
+      "id": "MISSING_CONTEXT",
+      "language": "ru",
+      "language_review": "not_required",
+      "input": {
+        "schema_version": "qonimai.analysis.draft-1",
+        "revision": 1,
+        "meeting": {
+          "started_at": null,
+          "timezone": null
+        },
+        "participants": [
+          {
+            "id": "p1",
+            "name": "Ирина"
+          },
+          {
+            "id": "p2",
+            "name": "Данияр"
+          }
+        ],
+        "speakers": [
+          {
+            "speaker_id": "spk1",
+            "participant_id": "p1",
+            "display_name": "Ирина",
+            "confirmed": true
+          },
+          {
+            "speaker_id": "spk2",
+            "participant_id": "p2",
+            "display_name": "Данияр",
+            "confirmed": true
+          }
+        ],
+        "segments": [
+          {
+            "id": "s1",
+            "start": 0,
+            "end": 4,
+            "speaker_id": "spk1",
+            "text": "Данияр, отправь список завтра."
+          }
+        ]
+      },
+      "expected": {
+        "status": "ok",
+        "data": {
+          "source_revision": 1,
+          "summary": [
+            {
+              "id": "f1",
+              "text": "Данияру поручили отправить список «завтра»; дата совещания неизвестна.",
+              "source_segment_ids": [
+                "s1"
+              ]
+            }
+          ],
+          "decisions": [],
+          "tasks": [
+            {
+              "id": "t1",
+              "description": "Отправить список",
+              "author_speaker_id": "spk1",
+              "assignee_id": "p2",
+              "due_text": "завтра",
+              "due_date": null,
+              "source_segment_ids": [
+                "s1"
+              ],
+              "requires_clarification": true,
+              "clarification_reasons": [
+                {
+                  "code": "missing_meeting_context",
+                  "message": "Для «завтра» нужны дата совещания и его часовой пояс."
+                }
+              ]
+            }
+          ]
+        },
+        "error": null
+      },
+      "check": "Не использовать дату компьютера или дату создания fixture."
+    }
+  ]
+}
